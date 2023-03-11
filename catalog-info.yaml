@@ -2,11 +2,19 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: test-repository
+  description: A service that does this and that
   annotations:
     github.com/project-slug: micc83/test-repository
+  tags:
+    - php
+  links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: production
   owner: guests
   dependsOn:
     - component:example-website
