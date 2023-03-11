@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-repository
+  annotations:
+    github.com/project-slug: micc83/test-repository
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
