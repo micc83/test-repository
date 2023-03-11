@@ -8,3 +8,7 @@ spec:
   type: other
   lifecycle: unknown
   owner: guests
+  dependsOn:
+    - resource:component:example-website
+  providesApis:
+    - custom-api
