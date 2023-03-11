@@ -31,4 +31,4 @@ spec:
   lifecycle: production
   owner: guests
   definition:
-    $openapi: ./schema.yml
+    $text: ./schema.yml
