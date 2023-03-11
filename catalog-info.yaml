@@ -5,7 +5,7 @@ metadata:
   description: A service that does this and that
   annotations:
     github.com/project-slug: micc83/test-repository
-    backstage.io/techdocs-ref: .
+    backstage.io/techdocs-ref: dir:.
   tags:
     - php
   links:
