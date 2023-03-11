@@ -1,10 +1,10 @@
-# ${{ values.component_id }}
+# Test repository
 
-${{ values.description }}
+My test repository description
 
 ## Getting started
 
 Start writing your documentation by adding more markdown (.md) files to this
 folder (/docs) or replace the content in this file.
 
-<iframe src="https://micc83.getoutline.com/s/0b845983-bad9-439f-bb46-86199e6c3953" />
+<iframe src="https://micc83.getoutline.com/s/0b845983-bad9-439f-bb46-86199e6c3953" style="width:100%;height: 600px" />
