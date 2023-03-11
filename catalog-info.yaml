@@ -13,6 +13,10 @@ metadata:
       title: Admin Dashboard
       icon: dashboard
       type: admin-dashboard
+techdocs:
+  sanitizer:
+    allowedIframeHosts: 
+      - micc83.getoutline.com
 spec:
   type: service
   lifecycle: production
