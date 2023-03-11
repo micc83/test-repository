@@ -2,7 +2,7 @@ site_name: Test repository
 site_description: My test repository
 
 nav:
-  - Introduction: readme.md
+  - Introduction: index.md
 
 plugins:
   - techdocs-core
