@@ -9,6 +9,6 @@ spec:
   lifecycle: unknown
   owner: guests
   dependsOn:
-    - resource:component:example-website
+    - component:example-website
   providesApis:
     - custom-api
