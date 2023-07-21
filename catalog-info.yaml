@@ -3,7 +3,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: guests
+  name: team-voyager
+  title: Team Voyager
 spec:
   type: team
   children: []
