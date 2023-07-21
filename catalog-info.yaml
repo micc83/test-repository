@@ -39,13 +39,23 @@ spec:
   type: team
   children: []
 ---
+# Systems
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: documentary
+  title: Documentary
+  description: Handles documents upload/download and validation
+spec:
+  owner: team-voyager
+---
 # Service 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-example-service
-  title: Service 1
-  description: A service that does this and that
+  title: Documentary Backend
+  description: Service to handle documents upload/download and validation
   annotations:
     github.com/project-slug: micc83/test-repository
     backstage.io/techdocs-ref: dir:.
@@ -59,6 +69,7 @@ spec:
   type: service
   lifecycle: production
   owner: team-voyager
+  system: documentary
   providesApis:
     - custom-api
     - my-custom-async-api
@@ -138,7 +149,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-example-website
-  title: Service 1 Admin panel
+  title: Documentary Admin
   description: My example website
   links:
     - url: https://admin.example-org.com
@@ -165,7 +176,7 @@ spec:
   type: database
   owner: team-bi
 ---
-# BigQuery
+# Postgres
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
