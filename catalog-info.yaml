@@ -9,6 +9,8 @@ spec:
   children: 
     - team-voyager
     - team-buktu
+    - team-devops
+    - team-bi
 ---
 # Team Voyager
 apiVersion: backstage.io/v1alpha1
