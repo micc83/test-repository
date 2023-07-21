@@ -92,7 +92,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: another-example-service
-  title: Service 2
+  title: Bookings
   description: A service that does this and that
   tags:
     - node
@@ -146,7 +146,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: my-graphql-api
-  title: Service 2 GraphQL API
+  title: Bookings GraphQL API
   description: GraphQL API
 spec:
   type: graphql
@@ -176,6 +176,26 @@ spec:
     - custom-api
   dependsOn:
     - component:my-example-service
+---
+# Website consuming my-graphql-api
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: booking-checkout
+  title: Booking Checkout Page
+  description: Booking Checkout Page
+  links:
+    - url: https://checkout.example-org.com
+      title: Cart page
+spec:
+  type: website
+  lifecycle: production
+  owner: team-buktu
+  system: bookings
+  consumesApis: 
+    - my-graphql-api
+  dependsOn:
+    - component:another-example-service
 ---
 # BigQuery
 apiVersion: backstage.io/v1alpha1
