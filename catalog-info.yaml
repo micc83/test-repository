@@ -87,6 +87,7 @@ spec:
   dependsOn:
     - resource:google-big-query
     - resource:postgresql
+    - component:nestjs-logger
 ---
 # Service 2
 apiVersion: backstage.io/v1alpha1
@@ -113,6 +114,7 @@ spec:
     - my-graphql-api
   dependsOn:
     - resource:postgresql
+    - component:nestjs-logger
 ---
 # OpenAPI from service 1
 apiVersion: backstage.io/v1alpha1
@@ -177,6 +179,7 @@ spec:
     - custom-api
   dependsOn:
     - component:my-example-service
+    - component:wr-core
 ---
 # Website consuming my-graphql-api
 apiVersion: backstage.io/v1alpha1
@@ -197,6 +200,7 @@ spec:
     - my-graphql-api
   dependsOn:
     - component:another-example-service
+    - component:wr-core
 ---
 # BigQuery
 apiVersion: backstage.io/v1alpha1
@@ -219,3 +223,26 @@ metadata:
 spec:
   type: database
   owner: team-devops
+---
+# Libraries
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nestjs-logger
+  title: WrNestjsLogger
+  description: Library to handle logging
+spec:
+  type: library
+  lifecycle: production
+  owner: team-voyager
+---
+# Libraries
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: wr-core
+  title: WrCore
+  description: Frontend library
+spec:
+  type: library
+  lifecycle: production
