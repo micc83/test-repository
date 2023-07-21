@@ -1,4 +1,15 @@
 # Organization
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: monkeys
+  title: Monkeys
+spec:
+  type: team
+  children: 
+    - team-voyager
+    - team-buktu
+---
 # Team Voyager
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -245,4 +256,5 @@ metadata:
   description: Frontend library
 spec:
   type: library
+  owner: monkeys
   lifecycle: production
