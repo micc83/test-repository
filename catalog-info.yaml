@@ -49,6 +49,16 @@ metadata:
 spec:
   owner: team-voyager
 ---
+# Systems
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bookings
+  title: Bookings
+  description: Handle the bookings
+spec:
+  owner: team-buktu
+---
 # Service 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -95,6 +105,7 @@ spec:
   type: service
   lifecycle: production
   owner: team-buktu
+  system: bookings
   consumesApis:
     - my-custom-async-api
   providesApis:
@@ -160,6 +171,7 @@ spec:
   type: website
   lifecycle: production
   owner: team-voyager
+  system: documentary
   consumesApis: 
     - custom-api
   dependsOn:
