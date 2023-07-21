@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: test-repository
+  name: example-service
   description: A service that does this and that
   annotations:
     github.com/project-slug: micc83/test-repository
