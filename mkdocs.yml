@@ -3,6 +3,7 @@ site_description: My test repository
 
 nav:
   - Introduction: index.md
+  - Changelog: CHANGELOG.md
 
 plugins:
   - techdocs-core
