@@ -44,7 +44,5 @@ spec:
   consumesApi: 
     - api:custom-api
   dependsOn:
-    - component:example-service
-      relations:
-        - consumes
+    - example-service
 
