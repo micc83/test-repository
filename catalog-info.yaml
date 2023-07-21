@@ -107,7 +107,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: custom-api
-  title: Service 1 REST API
+  title: Documentary REST API
   description: Retrieve pets
 spec:
   type: openapi
