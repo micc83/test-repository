@@ -33,6 +33,16 @@ spec:
     $text: ./schema.yml
 ---
 apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: custom-async-api
+  description: RMQ messages
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: guests
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: example-website
