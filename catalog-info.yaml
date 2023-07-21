@@ -54,5 +54,5 @@ spec:
   consumesApi: 
     - custom-api
   dependsOn:
-    - example-service
+    - component:example-service
 
