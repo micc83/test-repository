@@ -9,3 +9,7 @@ channels:
         payload:
           type: string
           pattern: '^hello .+$'
+  world:
+    subscribe:
+      message:
+        description: An event describing that a user just signed up.
