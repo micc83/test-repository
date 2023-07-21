@@ -92,7 +92,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: another-example-service
-  title: Bookings
+  title: Bookings Backend
   description: A service that does this and that
   tags:
     - node
