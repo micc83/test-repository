@@ -64,6 +64,7 @@ spec:
     - my-custom-async-api
   dependsOn:
     - resource:google-big-query
+    - resource:postgresql
 ---
 # Service 2
 apiVersion: backstage.io/v1alpha1
@@ -87,6 +88,8 @@ spec:
     - my-custom-async-api
   providesApis:
     - my-graphql-api
+  dependsOn:
+    - resource:postgresql
 ---
 # OpenAPI from service 1
 apiVersion: backstage.io/v1alpha1
