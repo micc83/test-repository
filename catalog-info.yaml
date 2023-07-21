@@ -55,7 +55,7 @@ spec:
   lifecycle: production
   owner: guests
   consumesApis: 
-    - api:custom-api
+    - custom-api
   dependsOn:
     - component:my-example-service
 
