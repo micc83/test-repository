@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-service
+  name: my-example-service
   description: A service that does this and that
   annotations:
     github.com/project-slug: micc83/test-repository
@@ -35,7 +35,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: custom-async-api
+  name: my-custom-async-api
   description: RMQ messages
 spec:
   type: asyncapi
@@ -45,7 +45,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-website
+  name: my-example-website
   description: My example website
 spec:
   type: website
@@ -54,5 +54,5 @@ spec:
   consumesApi: 
     - custom-api
   dependsOn:
-    - component:example-service
+    - component:my-example-service
 
