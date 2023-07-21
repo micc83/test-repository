@@ -41,6 +41,8 @@ spec:
   type: asyncapi
   lifecycle: production
   owner: guests
+  definition:
+    $text: ./asyncapi.yml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
