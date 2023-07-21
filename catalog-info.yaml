@@ -69,6 +69,7 @@ metadata:
   annotations:
     github.com/project-slug: micc83/test-repository
     backstage.io/techdocs-ref: dir:.
+    sentry.io/project-slug: value
   tags:
     - php
   links:
