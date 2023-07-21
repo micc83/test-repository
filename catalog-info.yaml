@@ -1,8 +1,19 @@
+# Organization
+# Teams
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: guests
+spec:
+  type: team
+  children: []
+---
 # Service 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-example-service
+  title: Service 1
   description: A service that does this and that
   annotations:
     github.com/project-slug: micc83/test-repository
@@ -26,6 +37,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: another-example-service
+  title: Service 2
   description: A service that does this and that
   tags:
     - node
@@ -48,6 +60,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: custom-api
+  title: Service 1 REST API
   description: Retrieve pets
 spec:
   type: openapi
@@ -61,6 +74,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: my-custom-async-api
+  title: Service 1 AsyncAPI
   description: RMQ messages
 spec:
   type: asyncapi
@@ -74,6 +88,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: my-graphql-api
+  title: Service 2 GraphQL API
   description: GraphQL API
 spec:
   type: graphql
@@ -87,6 +102,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-example-website
+  title: Service 1 Admin panel
   description: My example website
   links:
     - url: https://admin.example-org.com
