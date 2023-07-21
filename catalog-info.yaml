@@ -121,7 +121,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: my-custom-async-api
-  title: Service 1 AsyncAPI
+  title: Documentary RMQ
   description: RMQ messages
 spec:
   type: asyncapi
