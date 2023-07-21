@@ -19,6 +19,16 @@ spec:
   type: team
   children: []
 ---
+# Team BI
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-bi
+  title: BI
+spec:
+  type: team
+  children: []
+---
 # Service 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -42,6 +52,8 @@ spec:
   providesApis:
     - custom-api
     - my-custom-async-api
+  dependsOn:
+    - resource:google-big-query
 ---
 # Service 2
 apiVersion: backstage.io/v1alpha1
@@ -128,4 +140,14 @@ spec:
     - custom-api
   dependsOn:
     - component:my-example-service
-
+---
+# BigQuery
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: google-big-query
+  title: Google BigQuery
+  description: Stores artist details
+spec:
+  type: database
+  owner: team-bi
