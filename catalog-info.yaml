@@ -22,6 +22,21 @@ spec:
     - my-custom-async-api
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: another-example-service
+  description: A service that does this and that
+  tags:
+    - node
+    - nestjs
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  consumesApis:
+    - my-custom-async-api
+---
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: custom-api
