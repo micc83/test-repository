@@ -29,6 +29,16 @@ spec:
   type: team
   children: []
 ---
+# Team Devops
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-devops
+  title: DevOps
+spec:
+  type: team
+  children: []
+---
 # Service 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -147,7 +157,18 @@ kind: Resource
 metadata:
   name: google-big-query
   title: Google BigQuery
-  description: Stores artist details
+  description: Stores BIG DATA
 spec:
   type: database
   owner: team-bi
+---
+# BigQuery
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgresql
+  title: PostgreSQL
+  description: Stores all databases
+spec:
+  type: database
+  owner: team-devops
