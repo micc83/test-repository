@@ -19,6 +19,7 @@ spec:
   owner: guests
   providesApis:
     - custom-api
+    - my-custom-async-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
