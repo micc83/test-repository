@@ -1,10 +1,20 @@
 # Organization
-# Teams
+# Team Voyager
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: team-voyager
   title: Team Voyager
+spec:
+  type: team
+  children: []
+---
+# Team Buktu
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-buktu
+  title: Team Buktu
 spec:
   type: team
   children: []
@@ -28,7 +38,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: guests
+  owner: team-voyager
   providesApis:
     - custom-api
     - my-custom-async-api
@@ -50,7 +60,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: guests
+  owner: team-buktu
   consumesApis:
     - my-custom-async-api
   providesApis:
@@ -66,7 +76,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: guests
+  owner: team-voyager
   definition:
     $text: ./schema.yml
 ---
@@ -80,7 +90,7 @@ metadata:
 spec:
   type: asyncapi
   lifecycle: production
-  owner: guests
+  owner: team-voyager
   definition:
     $text: ./asyncapi.yml
 ---
@@ -94,7 +104,7 @@ metadata:
 spec:
   type: graphql
   lifecycle: production
-  owner: guests
+  owner: team-buktu
   definition:
     $text: ./schema.graphql
 ---
@@ -113,7 +123,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: guests
+  owner: team-voyager
   consumesApis: 
     - custom-api
   dependsOn:
